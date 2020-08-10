@@ -1,0 +1,445 @@
+:root{
+    --primaryColor:rgb(240, 104, 13);
+    --secondaryColor:rgb(28, 224, 28);
+    --mainWhite:#fff;
+    --mainBlack: #222;
+    --mainGray: #ececec;
+    --mainSpacing: 0.1rem;
+    --mainTransition: all 0.3s linear;
+}
+/* #f09d51 */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    color: var(--mainBlack);
+    background: var(--mainWhite);
+    font-family: "lato",sans-serif;
+}
+/* start navbar styles */
+.navbar{
+    position: sticky;
+    top: 0;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: rgb(231, 226, 221);
+    z-index: 1;
+}
+
+.my-span{
+    color: var(--primaryColor);
+  
+}
+
+.navbar-center{
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+}
+.navbar-center h3{
+    font-family: cursive;
+    font-size: x-large;
+    font-weight: 900;
+    /* text-transform: uppercase; */
+}
+
+.nav-icon{
+    font-size: 1.5rem;
+}
+
+.cart-btn{
+    position: relative;
+    cursor: pointer;
+}
+
+.cart-items{
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: var(--primaryColor);
+    padding: 0 5px;
+    border-radius: 30%;
+    color: var(--mainWhite);
+}
+/* end navbar styles */
+/* start hero */
+.hero{
+    min-height: calc(100vh - 60px);
+    background: url('images/hero_car.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner{
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    display: inline-block;
+    padding: 2rem;
+}
+
+.banner-title{
+    font-size: 3.4rem;
+    text-transform: uppercase;
+    letter-spacing: var(--mainSpacing);
+    margin-bottom: 3rem;
+}
+
+.banner-btn{
+    padding: 1rem 3rem;
+    text-transform: uppercase;
+    letter-spacing: var(--mainSpacing);
+    font-size: 1rem;
+    background: var(--primaryColor);
+    color: var(--mainBlack);
+    border: 1px solid var(--primaryColor);
+    transition: var(--mainTransition);
+    cursor: pointer;
+}
+
+.banner-btn:hover{
+    background: transparent;
+    color: var(--primaryColor);
+}
+/* end hero */
+/* start products */
+.products{
+    padding: 4rem 0;
+}
+
+.section-title h2{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 5rem;
+    text-transform: uppercase;
+    letter-spacing: var(--mainSpacing);
+}
+
+.products-center{
+    width: 50vw;
+    margin: 0 auto;
+    max-width: 1170px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+    grid-column-gap: 2rem;
+    grid-row-gap: 3rem;
+}
+
+.img-container{
+    position: relative;
+    overflow: hidden;
+}
+
+.bag-btn{
+    position: absolute;
+    top: 70%;
+    right: 0;
+    background: var(--primaryColor);
+    border: none;
+    text-transform: uppercase;
+    padding: 0.5rem 0.75rem;
+    letter-spacing: var(--mainSpacing);
+    font-weight: bold;
+    transition: var(--mainTransition);
+    transform: translateX(101%);
+    cursor: pointer;
+}
+
+.bag-btn:hover{
+    color: var(--mainWhite);
+}
+
+.fa-shopping-cart{
+    margin-right: 0.5rem;
+}
+
+.img-container:hover .bag-btn{
+    transform: translateX(0);
+}
+
+.products-img{
+    display: block;
+    width: 100%;
+    min-height: 12rem;
+    transition: var(--mainTransition);
+}
+.img-container:hover .products-img{
+    opacity: 0.5;
+}
+.products h3{
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    letter-spacing: var(--mainSpacing);
+    text-align: center;
+}
+.products h4{
+    font-weight: 600;
+    margin-top: 0.8rem;
+    letter-spacing: var(--mainSpacing);
+    color: var(--primaryColor);
+    text-align: center;
+}
+/* end products */
+
+/* cart */
+.cart-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    transition: var(--mainTransition);
+    background: rgb(240, 157, 81, 0.5);
+    z-index: 2;
+    visibility: hidden;
+}
+/* i created this .show-overlay when the initial method won't run */
+/* .show-overlay{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    transition: var(--mainTransition);
+    background: rgb(240, 157, 81, 0.5);
+    z-index: 2;
+  } */
+
+.cart{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    z-index: 3;
+    background: rgb(231, 226, 221);
+    padding: 1.5rem;
+    transition: var(--mainTransition);
+    transform: translateX(100%);
+}
+.input-form{
+    height: 20%;
+    width: auto;
+    padding: 2rem;
+}
+.cart-page-btn{
+    display: flex;
+}
+.cart-page-btn .checkout{
+    margin-left: 10px;
+}
+
+.showCart{
+    transform: translateX(0);
+}
+
+.transparentBcg{
+ visibility: visible;
+}
+
+/* option.html */
+.opt-hero{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.4),
+     rgba(0,0,0,0.4)), url(images/opt-banner.jpg);
+     background-size: cover;
+     background-position: center;
+     position: absolute;
+     /* overflow: hidden; */
+}
+.optform-box{
+    width: 480px;
+    height: 500px;
+    position: relative;
+    margin: 6% auto;
+    background-color: #fff;
+    padding: 5px;
+    overflow: hidden;
+}
+/* .optform-box form{
+    display: flex;
+} */
+
+.optbutton-box{
+    width: 450px;
+    height: 40px;
+    margin: 15px auto;
+    position: relative;
+    box-shadow: 0 0 20px 9px #ff61241f;
+    border-radius: 30px;
+}
+.toggle-btn{
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+.amount{
+    width: 100%;
+    /* top: 20px; */
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 400;
+    background: rgb(231, 226, 221);
+    padding-top: 10px;
+    position: relative;
+    outline: none;
+}
+.amount span{
+    font-size: 2rem;
+    font-weight: 900;
+}
+#opt-btn{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 140px;
+    height: 100%;
+    background: linear-gradient(to right, #ff105f, #ffad06);
+    border-radius: 30px;
+    transition: -5s;
+}
+.optinput-group{
+    top: 190px;
+    width: 280px;
+    transition: -5s;
+}
+.optinput{
+    /* display: block; */
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background:transparent ;
+}
+.opt-submit{
+    width: 60%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+    background: linear-gradient(to right, #ff105f, #ffad06);
+}
+.opt-bulk-add{
+    width: 80px;
+    padding: 10px 10px;
+    border-radius: 5px;
+     outline: none;
+    cursor: pointer;
+}
+.opt-bulk-submit{
+    width: 150px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background: linear-gradient(to right, #ff105f, #ffad06);
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    margin-left: 50px;
+}
+
+#standard{
+    margin-left: 90px;
+    
+}
+#card-pay{
+margin-left: 550px;
+margin-top: -120px;
+}
+#card-bulk-pay{
+    margin-left: 550px;
+    margin-top: -260px;
+}
+.loading{
+    width: 400px;
+    transform: translateX(-50%);
+}
+.show-loading{
+    margin-left: 40%;
+    margin-top: -30%;
+    transform: translateX(0);
+}
+/* end of option.html */
+@media screen and (min-width: 768px){
+    .cart{
+        width: 30vw;
+        min-width: 450px;
+    }
+}
+
+.close-cart{
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+.cart h2{
+    text-transform: capitalize;
+    text-align: center;
+    letter-spacing: var(--mainSpacing);
+    margin-bottom: 2rem;
+}
+
+/* cart item */
+.cart-item{
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 1fr auto;
+    grid-column-gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.cart-item img{
+    width: 75px;
+    height: 75px;
+}
+
+.cart-item h4{
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: var(--mainSpacing);
+}
+.cart-item h5{
+    margin: 0.5rem 0;
+    letter-spacing: var(--mainSpacing);
+}
+.item-amount{
+    text-align: center;
+}
+.remove-item{
+    color: grey;
+    cursor: pointer;
+}
+.fa-chevron-up, .fa-chevron-down{
+    color: var(--primaryColor);
+    cursor: pointer;
+}
+/* end cart item */
+.cart-footer{
+    margin-top: 2rem;
+    letter-spacing: var(--mainSpacing);
+    text-align: center;
+}
+.cart-footer h3{
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+/* end cart */

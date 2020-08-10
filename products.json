@@ -1,0 +1,58 @@
+{
+    "items":[
+        {
+            "sys": { "id": "1" },
+            "fields":{
+                "title": "Rugged mustang",
+                "price": 5000,
+                "image":{"fields": {"file": { 
+                "url": "./images/cars-1.jpg"}}}
+            }
+        },
+        {
+            "sys": { "id": "2" },
+            "fields":{
+                "title": "blue monster",
+                "price": 5000,
+                "image":{"fields": {"file": { 
+                "url": "./images/cars-2.jpg"}}}
+            }
+        },
+        {
+            "sys": { "id": "3" },
+            "fields":{
+                "title": "Blue Sedan",
+                "price": 4000,
+                "image":{"fields": {"file": { 
+                "url": "./images/cars-3.jpg"}}}
+            }
+        },
+        {
+            "sys": { "id": "4" },
+            "fields":{
+                "title": "Jungle coupe",
+                "price": 3000,
+                "image":{"fields": {"file": { 
+                "url": "./images/cars-6.jpg"}}}
+            }
+        },
+        {
+            "sys": { "id": "5" },
+            "fields":{
+                "title": " red launcher",
+                "price": 3000,
+                "image":{"fields": {"file": { 
+                "url": "./images/cars-5.jpg"}}}
+            }
+        },
+        {
+            "sys": { "id": "6" },
+            "fields":{
+                "title": "the superior",
+                "price": 6000,
+                "image":{"fields": {"file": { 
+                "url": "./images/cars-4.jpg"}}}
+            }
+        }
+    ]
+    }

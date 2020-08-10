@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental App</title>
+    <link rel="stylesheet" href="estyle.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <script src="https://kit.fontawesome.com/a17785010b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- navbar -->
+    <div class="navbar">
+        <div class="navbar-center">
+            <span class="nav-icon">
+                <i class="fas fa-bars"></i>
+            </span>
+            <h3>Melva's <span class="my-span">Cars</span></h3>
+            <div class="cart-btn">
+                <span class="nav-icon">
+                    <i class="fas fa-car"></i>
+                </span>
+                <div class="cart-items">0</div>
+            </div>
+        </div>
+    </div>
+    <!-- end navbar -->
+
+    <!-- hero -->
+    <header class="hero">
+        <div class="banner">
+            <h1 class="banner-title">Cars you can trust</h1>
+            <button class="banner-btn">rent now</button>
+        </div>
+    </header>
+    <!-- end hero -->
+
+    <!-- products -->
+    <section class="products">
+        <div class="section-title">
+            <h2>Exotic Road Masters</h2>
+        </div>
+        <div class="products-center">
+        
+            
+            
+        </div>
+        <!-- cart -->
+        <div id="cartarea" class="cart-overlay">
+            <div id="actualcart" class="cart">
+                <span class="close-cart">
+                    <i class="fas fa-window-close"></i>
+                </span>
+                <h2>Rent</h2>
+                <div class="cart-content">
+                    <!-- cart-item -->
+                    <!-- <div class="cart-item"> -->
+                       
+                    <!-- </div> -->
+                    <!-- end of cart-item -->
+                </div>
+                <div class="cart-footer">
+                    <h3>your total : # <span class="cart-total">0
+                    </span></h3>
+                    <div class="input-form">
+                        <form action="">
+                            <!-- <input type="hidden" id="amount" name="amount" value=""> -->
+                            <!-- <input type="email" id="email" name="email" placeholder="email" value=""> -->
+                            <!-- <input type="text" id="phone" placeholder="phone number" name="phone" value=""> -->
+                    </div>
+                    <div class="cart-page-btn">
+                    <button class="clear-cart banner-btn">clear rent</button> 
+                    <button class="checkout banner-btn"  id="submit">pay now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end of cart -->
+    </section>
+    <!-- end of products -->
+    <!-- contentful -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script> -->
+    <!-- cart.js -->
+    <!-- <script src="https://api.flutterwave.com/v3/payments"></script> -->
+    <!-- <script type="text/javascript" src="https://api.ravepay.co/flwv3-pug/getpaidx/api/flwpbf-inline.js"></script> -->
+    <script src="estyle.js"></script> 
+    <script src="expert.js"></script>
+</body>
+</html>

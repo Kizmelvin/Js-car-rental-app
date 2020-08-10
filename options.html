@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Options</title>
+    <link rel="stylesheet" href="estyle.css">
+</head>
+<body>
+<div class="opt-hero">
+    <div class="optform-box">
+        <div class="optbutton-box">
+            <div id="opt-btn"></div>
+            <button type="button" onclick="toggleStandard()" class="toggle-btn">Standard Pay</button>
+            <button type="button"onclick="toggleCard()" class="toggle-btn">Transfer Money</button>
+            <button type="button"onclick="toggleBulk()" class="toggle-btn">Bulk Transfer</button>
+        </div>
+        <!-- <div class="amount">
+          <h4>Pay <br><span>#5000</span></h4>
+        </div> -->
+        <form id="standard" class="optinput-group">
+            <input type="text" class="optinput" placeholder="Full-Name" id="stfullname" name="name" value="" required>
+            <input type="text" class="optinput" placeholder="Email" id="stemail" name="email" value="" required>
+            <br>
+            <br>
+            <button type="submit" id="standard" class="opt-submit">Make Payment</button>
+        </form>
+        <form  id="card-pay" class="optinput-group">
+            <input type="number" class="optinput" placeholder="Enter Bank Code" id="bank-code"  required value="">
+            <input type="number" class="optinput" placeholder="Enter Account Number" id="acct-number"  value="" required>
+            <input type="number" class="optinput" placeholder="Enter Amount" id="amount"  value="" required>
+            <input type="text" class="optinput" placeholder="Description" id="desc"  value="" required>
+            <input type="text" class="optinput" placeholder="Currency" id="curr"  value="" required>
+            <br>
+            <br>
+             <button type="submit" id="transfer" class="opt-submit">Make Transfer</button>
+        </form>
+        <form  id="card-bulk-pay" class="optinput-group">
+            <input type="number" class="optinput" placeholder="Enter Bank Code" id="bulk-bank-code"  required value="">
+            <input type="number" class="optinput" placeholder="Enter Account Number" id="bulk-acct-number"  value="" required>
+            <input type="number" class="optinput" placeholder="Enter Amount" id="bulk-amount"  value="" required>
+            <input type="text" class="optinput" placeholder="Description" id="bulk-desc"  value="" required>
+            <input type="text" class="optinput" placeholder="Currency" id="bulk-curr"  value="" required>
+            <br>
+            <button type="submit" id="bulk-data" class="opt-bulk-add">Add Data</button>
+            <br>
+            <br>
+            <button type="submit" id="bulk-transfer" class="opt-bulk-submit">Make Transfer</button>
+        </form>
+       </div>
+       <!-- <div class="loading" id="loadingGif">
+           <img src="images/loading.gif" alt="loading">
+
+       </div> -->
+</div>
+<script>
+    let w = document.getElementById('card-bulk-pay')
+    let x = document.getElementById("standard")
+    let y =document.getElementById('card-pay')
+    let z = document.getElementById('opt-btn')
+
+function toggleCard(){
+    w.style.marginLeft ='550px';
+    x.style.marginLeft ='-450px';
+    y.style.marginLeft = '100px'
+    z.style.marginLeft = '140px'
+  }
+
+function toggleStandard(){
+    w.style.marginLeft ='550px';
+    y.style.marginLeft ='550px';
+    x.style.marginLeft = '100px'
+    z.style.marginLeft = '0px'
+}
+function toggleBulk(){
+    w.style.marginLeft ='100px';
+    x.style.marginLeft ='-450px';
+    y.style.marginLeft = '550px'
+    z.style.marginLeft = '310px'
+}
+</script>
+<script src="estyle.js"></script>
+<script src="expert.js"></script>
+<script src="test.js"></script>
+</body>
+</html>
