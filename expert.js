@@ -85,7 +85,7 @@ const transferObject = {
 
 }
 
-fetch("http://localhost:4005/transfer", {
+fetch("https://server-handle.glitch.me/transfer", {
   method: "POST",
   headers: {
     Accept: "application/json",
@@ -136,7 +136,7 @@ document.getElementById('bulk-data').addEventListener("click", (e) => {
 document.getElementById("bulk-transfer").addEventListener("click", (e) => { 
     e.preventDefault();
 
-    fetch("http://localhost:4005/bulk", {
+    fetch("https://server-handle.glitch.me/bulk", {
   method: "POST",
   headers: {
     Accept: "application/json",
